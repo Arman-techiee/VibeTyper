@@ -8,31 +8,33 @@ export const ResultsDisplay = ({ wpm, accuracy, elapsedTime, errors, completed }
   if (!completed) return null;
 
   return (
-    <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-6 mb-6">
-      <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center flex items-center justify-center">
-        <Trophy className="w-6 h-6 mr-2 text-yellow-600" />
+    <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-slate-800 dark:to-slate-700 border border-green-200 dark:border-slate-600 rounded-lg p-6 mb-6">
+      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center flex items-center justify-center">
+        <Trophy className="w-6 h-6 mr-2 text-yellow-600 dark:text-yellow-400" />
         Assessment Results
       </h3>
+      
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
         <div className="text-center">
-          <div className="text-4xl font-bold text-green-700">{wpm}</div>
-          <div className="text-gray-600 font-medium">Words per Minute</div>
+          <div className="text-4xl font-bold text-green-700 dark:text-green-400">{wpm}</div>
+          <div className="text-gray-600 dark:text-slate-300 font-medium">Words per Minute</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-blue-700">{accuracy}%</div>
-          <div className="text-gray-600 font-medium">Accuracy Rate</div>
+          <div className="text-4xl font-bold text-blue-700 dark:text-blue-400">{accuracy}%</div>
+          <div className="text-gray-600 dark:text-slate-300 font-medium">Accuracy Rate</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-purple-700">{elapsedTime}s</div>
-          <div className="text-gray-600 font-medium">Time Taken</div>
+          <div className="text-4xl font-bold text-purple-700 dark:text-purple-400">{elapsedTime}s</div>
+          <div className="text-gray-600 dark:text-slate-300 font-medium">Time Taken</div>
         </div>
         <div className="text-center">
-          <div className="text-4xl font-bold text-red-700">{errors}</div>
-          <div className="text-gray-600 font-medium">Total Errors</div>
+          <div className="text-4xl font-bold text-red-700 dark:text-red-400">{errors}</div>
+          <div className="text-gray-600 dark:text-slate-300 font-medium">Total Errors</div>
         </div>
       </div>
-      <div className={`text-center p-4 ${performance.bgColor} border rounded-lg`}>
-        <div className="text-lg font-semibold text-gray-700">Performance Classification</div>
+
+      <div className={`text-center p-4 ${performance.bgColor} dark:bg-slate-800 border dark:border-slate-600 rounded-lg`}>
+        <div className="text-lg font-semibold text-gray-700 dark:text-slate-200">Performance Classification</div>
         <div className={`text-2xl font-bold ${performance.color}`}>{performance.level}</div>
       </div>
     </div>
