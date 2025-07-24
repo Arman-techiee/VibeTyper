@@ -6,13 +6,13 @@ import { useTypingTest } from '../hooks/useTypingTest';
 import { getTextsByDifficulty } from '../lib/textSamples';
 import { getPerformanceLevel, calculateProgress } from '../lib/utils';
 
-import { StatCard } from '@components/ui/StatCard';
-import { SettingsPanel } from '@components/ui/SettingsPanel';
-import { TextDisplay } from '@components/ui/TextDisplay';
-import { TypingInput } from '@components/ui/TypingInput';
-import { ResultsDisplay } from '@components/ui/ResultsDisplay';
-import { TestHistory } from '@components/ui/TestHistory';
-import { Instructions } from '@components/ui/Instructions';
+import { StatCard } from '../components/ui/StatCard';
+import { SettingsPanel } from '../components/ui/SettingsPanel';
+import { TextDisplay } from '../components/ui/TextDisplay';
+import { TypingInput } from '../components/ui/TypingInput';
+import { ResultsDisplay } from '../components/ui/ResultsDisplay';
+import { TestHistory } from '../components/ui/TestHistory';
+import { Instructions } from '../components/ui/Instructions';
 
 const TypingTest = () => {
   const navigate = useNavigate();
