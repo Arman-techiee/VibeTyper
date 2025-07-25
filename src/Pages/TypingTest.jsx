@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Clock, RotateCcw, Trophy, Target, Settings, BarChart3, Keyboard, CheckCircle } from 'lucide-react';
 
@@ -41,6 +41,25 @@ const TypingTest = () => {
   const remainingTime = Math.max(0, testSettings.duration - elapsedTime);
   const progress = calculateProgress(input.length, currentText.length);
   const performance = getPerformanceLevel(wpm);
+  const isTestFinished = completed || (remainingTime === 0 && isActive);
+
+  useEffect(() => {
+    // When the test is finished (either by completion or timeout),
+    // save the result to localStorage for the results page.
+    if (isTestFinished) {
+      const result = {
+        wpm,
+        accuracy,
+        errors,
+        timeElapsed: elapsedTime,
+        timestamp: Date.now(),
+        difficulty: testSettings.difficulty,
+        duration: testSettings.duration,
+      };
+      localStorage.setItem('lastTestResult', JSON.stringify(result));
+    }
+  }, [isTestFinished, wpm, accuracy, errors, elapsedTime, testSettings.difficulty, testSettings.duration]);
+
 
   return (
     <div className="max-w-6xl mx-auto bg-gray-50 dark:bg-gray-900 min-h-screen p-6 transition-colors duration-300">
