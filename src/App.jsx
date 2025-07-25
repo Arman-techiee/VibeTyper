@@ -5,8 +5,9 @@ import Home from './Pages/Home';
 import TypingTest from './Pages/TypingTest';
 import Results from './Pages/Results';
 import About from './Pages/About';  
-import NavBar from './components/NavBar';
+
 import Footer from './components/Footer';  // Make sure you have Footer component
+import NavBar from './Components/NavBar';
 
 const App = () => {
   return (
