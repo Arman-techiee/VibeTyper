@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Keyboard, Menu, X, Home, Info, Target, BarChart3, Sun, Moon } from 'lucide-react';
+import { Button } from './ui/button';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 
 const DarkModeToggle = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -27,7 +29,7 @@ const DarkModeToggle = () => {
     <button
       aria-label="Toggle Dark Mode"
       onClick={() => setIsDark(!isDark)}
-      className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+      className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
     >
       {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
     </button>
@@ -73,13 +75,58 @@ const NavBar = () => {
                 );
               })}
             </div>
-            {/* Dark mode toggle on desktop */}
-            <DarkModeToggle />
+            
+            {/* Desktop Auth and Dark Mode */}
+            <div className="flex items-center space-x-3">
+              <DarkModeToggle />
+              
+              {/* Desktop Auth Buttons */}
+              <SignedOut>
+                <SignInButton mode="modal">
+                  <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-md transition-colors">
+                    Sign In
+                  </Button>
+                </SignInButton>
+              </SignedOut>
+              
+              <SignedIn>
+                <UserButton 
+                  afterSignOutUrl="/"
+                  appearance={{
+                    elements: {
+                      avatarBox: "w-8 h-8"
+                    }
+                  }}
+                />
+              </SignedIn>
+            </div>
           </div>
 
-          {/* Mobile menu and toggle button */}
+          {/* Mobile menu and controls */}
           <div className="flex items-center md:hidden space-x-2">
             <DarkModeToggle />
+            
+            {/* Mobile Auth Buttons */}
+            <SignedOut>
+              <SignInButton mode="modal">
+                <Button size="sm" className="bg-blue-600 hover:bg-blue-700 text-white font-medium">
+                  Sign In
+                </Button>
+              </SignInButton>
+            </SignedOut>
+            
+            <SignedIn>
+              <UserButton 
+                afterSignOutUrl="/"
+                appearance={{
+                  elements: {
+                    avatarBox: "w-8 h-8"
+                  }
+                }}
+              />
+            </SignedIn>
+            
+            {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 hover:bg-blue-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
