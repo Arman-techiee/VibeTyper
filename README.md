@@ -1,4 +1,4 @@
-TypeTester - React.js Typing Speed Test Application
+VibeTyper - React.js Typing Speed Test Application
 
 A modern, interactive typing speed test application built with React.js, Vite, and Tailwind CSS. Test and improve your typing skills with real-time feedback on speed, accuracy, and errors.
 
