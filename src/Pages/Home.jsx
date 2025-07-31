@@ -65,10 +65,10 @@ const Home = () => {
   }, []);
 
   const stats = [
-    { number: '50K+', label: 'Assessments Completed', icon: CheckCircle },
+    { number: '50', label: 'Assessments Completed', icon: CheckCircle },
     { number: '99.9%', label: 'Accuracy Rate', icon: Target },
+    { number: '4.5/5', label: 'User Rating', icon: Star },
     { number: '24/7', label: 'Platform Availability', icon: Clock },
-    { number: '15+', label: 'Languages Supported', icon: Globe }
   ];
 
   const features = [
