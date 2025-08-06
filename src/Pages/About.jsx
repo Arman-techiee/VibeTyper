@@ -165,11 +165,10 @@ const About = () => {
   ];
 
   const developmentTeam = [
-    { name: 'Arman Khan', role: 'Lead Developer & Project Coordinator' },
-    { name: 'Samiksha Dhamala', role: 'UI/UX Designer & Frontend Developer' },
-    { name: 'Kalpana Chaudhary', role: 'Backend Developer & Database Architect' },
-    { name: 'Sampada K.C.', role: 'Quality Assurance & Testing Specialist' },
-    { name: 'Jyoti Singh', role: 'Research Analyst & Documentation Lead' }
+    { name: 'Arman Khan', role: 'BIT Student' },
+    { name: 'Samiksha Dhamala', role: 'BIT Student' },
+    { name: 'Kalpana Chaudhary', role: 'BIT Student' },
+    { name: 'Sampada K.C.', role: 'BIT Student' },
   ];
 
   return (
@@ -275,7 +274,7 @@ const About = () => {
               Academic Supervision & Institutional Support
             </h3>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
-              This project is conducted under the academic guidance of the Computer Science Department 
+              This project is conducted under the academic guidance of the IT Department 
               at Texas College of Management and IT, with institutional support ensuring adherence to 
               international standards in educational technology and assessment methodologies.
             </p>
