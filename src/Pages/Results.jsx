@@ -59,35 +59,35 @@ const Results = () => {
 
   const getPerformanceLevel = (wpm) => {
     if (wpm >= 80) return { 
-      level: 'Master Typist', 
+      level: 'Expert ', 
       color: 'text-purple-700 dark:text-purple-300', 
       bg: 'bg-gradient-to-br from-purple-50 to-indigo-50 dark:from-purple-900/20 dark:to-indigo-900/20',
       border: 'border-purple-200 dark:border-purple-700',
       description: 'Exceptional typing mastery - Professional level'
     };
     if (wpm >= 60) return { 
-      level: 'Expert Typist', 
+      level: 'Advanced', 
       color: 'text-blue-700 dark:text-blue-300', 
       bg: 'bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20',
       border: 'border-blue-200 dark:border-blue-700',
       description: 'Outstanding performance - Above average professional'
     };
     if (wpm >= 40) return { 
-      level: 'Proficient Typist', 
+      level: 'Proficient', 
       color: 'text-green-700 dark:text-green-300', 
       bg: 'bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20',
       border: 'border-green-200 dark:border-green-700',
       description: 'Good typing skills - Standard professional level'
     };
     if (wpm >= 25) return { 
-      level: 'Developing Typist', 
+      level: 'Developing', 
       color: 'text-yellow-700 dark:text-yellow-300', 
       bg: 'bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20',
       border: 'border-yellow-200 dark:border-yellow-700',
       description: 'Developing skills - Room for improvement'
     };
     return { 
-      level: 'Novice Typist', 
+      level: 'Beginner', 
       color: 'text-red-700 dark:text-red-300', 
       bg: 'bg-gradient-to-br from-red-50 to-pink-50 dark:from-red-900/20 dark:to-pink-900/20',
       border: 'border-red-200 dark:border-red-700',
