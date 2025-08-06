@@ -200,7 +200,7 @@ const About = () => {
           </h1>
           
           <p className="text-xl max-w-4xl mx-auto leading-relaxed text-blue-100 mb-10 animate-fade-in-up delay-3000">
-            A state-of-the-art typing proficiency evaluation system engineered by computer science students 
+            A state-of-the-art typing proficiency evaluation system engineered by BIT students 
             at Texas College of Management and IT, implementing evidence-based assessment methodologies 
             for academic and professional excellence.
           </p>
@@ -227,7 +227,7 @@ const About = () => {
             Development Team
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            VibeTyper represents the collaborative effort of dedicated computer science students, 
+            VibeTyper represents the collaborative effort of dedicated BIT students, 
             combining technical expertise with rigorous academic research methodologies.
           </p>
         </div>
