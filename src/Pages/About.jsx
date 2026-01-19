@@ -164,13 +164,6 @@ const About = () => {
     'Enhanced confidence in technology-dependent work environments'
   ];
 
-  const developmentTeam = [
-    { name: 'Arman Khan', role: 'BIT Student' },
-    { name: 'Samiksha Dhamala', role: 'BIT Student' },
-    { name: 'Kalpana Chaudhary', role: 'BIT Student' },
-    { name: 'Sampada K.C.', role: 'BIT Student' },
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
@@ -200,73 +193,72 @@ const About = () => {
           </h1>
           
           <p className="text-xl max-w-4xl mx-auto leading-relaxed text-blue-100 mb-10 animate-fade-in-up delay-3000">
-            A state-of-the-art typing proficiency evaluation system engineered by BIT students 
-            at Texas College of Management and IT, implementing evidence-based assessment methodologies 
-            for academic and professional excellence.
+            A state-of-the-art typing proficiency evaluation system developed by Arman Khan, 
+            BIT student at Texas College of Management and IT, implementing evidence-based assessment 
+            methodologies for academic and professional excellence.
           </p>
 
           <div className="inline-flex items-center gap-4 bg-white/15 backdrop-blur-sm rounded-xl px-8 py-4 border border-white/30 shadow-lg animate-fade-in-up delay-4000 hover:bg-white/20 transition-all duration-300 hover:scale-105">
             <GraduationCap className="w-7 h-7 text-blue-300 animate-bounce" />
             <span className="font-semibold text-blue-100 text-lg">
-              Academic Research Initiative | Texas College of Management & IT
+              Academic Project | Texas College of Management & IT
             </span>
           </div>
         </div>
       </section>
 
-      {/* Development Team Section */}
+      {/* Developer Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div 
-          id="team-header"
+          id="developer-header"
           data-animate
           className={`text-center mb-16 transform transition-all duration-1000 ${
-            isVisible['team-header'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            isVisible['developer-header'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-            Development Team
+            Project Creator
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            VibeTyper represents the collaborative effort of dedicated BIT students, 
-            combining technical expertise with rigorous academic research methodologies.
+            VibeTyper represents a dedicated solo development effort, combining technical expertise 
+            with rigorous academic research methodologies.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {developmentTeam.map((member, index) => (
-            <div
-              key={index}
-              id={`team-member-${index}`}
-              data-animate
-              className={`bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-200 dark:border-gray-700 transform hover:scale-105 hover:-translate-y-2 ${
-                isVisible[`team-member-${index}`] 
-                  ? 'translate-y-0 opacity-100' 
-                  : 'translate-y-10 opacity-0'
-              }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center transform hover:rotate-12 transition-transform duration-300">
-                  <User className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                    {member.name}
-                  </h3>
-                  <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
-                    {member.role}
-                  </p>
-                </div>
+        <div className="max-w-2xl mx-auto mb-16">
+          <div
+            id="developer-card"
+            data-animate
+            className={`bg-white dark:bg-gray-800 rounded-xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-200 dark:border-gray-700 transform hover:scale-105 ${
+              isVisible['developer-card'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            }`}
+          >
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center transform hover:rotate-12 transition-transform duration-300 flex-shrink-0">
+                <User className="w-12 h-12 text-white" />
+              </div>
+              <div className="text-center md:text-left flex-1">
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                  Arman Khan
+                </h3>
+                <p className="text-lg text-blue-600 dark:text-blue-400 font-medium mb-3">
+                  BIT Student & Project Creator
+                </p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Sole developer of VibeTyper, combining passion for technology with academic research 
+                  to create a professional-grade typing assessment platform. This project demonstrates 
+                  expertise in full-stack development, UI/UX design, and educational technology.
+                </p>
               </div>
             </div>
-          ))}
+          </div>
         </div>
 
         <div 
-          id="team-support"
+          id="institutional-support"
           data-animate
           className={`bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800 transform transition-all duration-1000 hover:scale-[1.02] ${
-            isVisible['team-support'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
+            isVisible['institutional-support'] ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
           }`}
         >
           <div className="text-center">
@@ -274,7 +266,7 @@ const About = () => {
               Academic Supervision & Institutional Support
             </h3>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
-              This project is conducted under the academic guidance of the IT Department 
+              This project is developed under the academic guidance of the IT Department 
               at Texas College of Management and IT, with institutional support ensuring adherence to 
               international standards in educational technology and assessment methodologies.
             </p>
@@ -300,7 +292,7 @@ const About = () => {
               
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
                 VibeTyper addresses the critical need for standardized, reliable typing proficiency 
-                assessment in contemporary academic and professional environments. Our platform integrates 
+                assessment in contemporary academic and professional environments. This platform integrates 
                 advanced computational methodologies with established educational assessment principles 
                 to deliver precise, actionable insights into typing performance.
               </p>
@@ -365,7 +357,7 @@ const About = () => {
             Research & Development Framework
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Our interdisciplinary research approach combines computational linguistics, cognitive psychology, 
+            An interdisciplinary research approach combining computational linguistics, cognitive psychology, 
             and educational assessment theory to advance typing proficiency evaluation methodologies.
           </p>
         </div>
@@ -465,7 +457,7 @@ const About = () => {
             Standardized Performance Classification
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Our evidence-based classification system provides internationally recognized benchmarks 
+            Evidence-based classification system providing internationally recognized benchmarks 
             for typing proficiency assessment across all competency levels.
           </p>
         </div>
