@@ -13,9 +13,8 @@ const AppRoute = () => {
       <Route 
         path="/typing-test" 
         element={
-          <ProtectedRoute>
             <TypingTest />
-          </ProtectedRoute>
+          
         } 
       />
       <Route 
