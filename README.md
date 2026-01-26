@@ -185,7 +185,7 @@ Ensure you have the following installed:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/vibetyper.git
+git clone https://github.com/Arman-techiee/vibetyper.git
 cd vibetyper
 ```
 
