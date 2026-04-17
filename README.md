@@ -185,7 +185,7 @@ Ensure you have the following installed:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/Arman-techiee/vibetyper.git
+git clone https://github.com/armanroot/vibetyper.git
 cd vibetyper
 ```
 
@@ -437,7 +437,7 @@ We welcome contributions! Please follow these steps:
 ### Contact
 
 - **Email**: arman.techiee@gmail.com
-- **GitHub**: [Arman-techiee](https://github.com/Arman-techiee)
+- **GitHub**: [armanroot](https://github.com/armanroot)
 
 ---
 
@@ -502,3 +502,4 @@ For issues, questions, or suggestions:
 [⬆ Back to Top](#vibetyper---professional-typing-assessment-platform)
 
 </div>
+
