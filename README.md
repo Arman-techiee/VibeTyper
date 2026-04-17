@@ -185,7 +185,7 @@ Ensure you have the following installed:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/armanroot/vibetyper.git
+git clone https://github.com/armancore/vibetyper.git
 cd vibetyper
 ```
 
@@ -437,7 +437,7 @@ We welcome contributions! Please follow these steps:
 ### Contact
 
 - **Email**: arman.techiee@gmail.com
-- **GitHub**: [armanroot](https://github.com/armanroot)
+- **GitHub**: [armancore](https://github.com/armancore)
 
 ---
 

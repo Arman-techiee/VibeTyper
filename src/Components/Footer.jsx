@@ -61,7 +61,7 @@ const Footer = () => {
             
             <div className="flex gap-3">
               <a
-                href="https://github.com/armanroot"
+                href="https://github.com/armancore"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-200 dark:bg-slate-800 rounded-lg text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition-all duration-200"
